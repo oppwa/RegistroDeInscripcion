@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller para periodistas · Colegio de Periodistas Cusco</title>
+<meta name="description" content="Taller para periodistas: perspectivas de la minería en Cusco, comunicación y vigilancia ciudadana de la inversión pública. Viernes 9 de octubre, 9:00 a. m. a 12:00 m.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A2150;--navy2:#123374;--gold:#EBCB84;--mist:#EAF0FB;--ink:#0A2150;--err:#C62828;--ok:#1B7F4B;--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif;color:#fff;background:var(--navy)}
+h1,h2,h3{font-family:Poppins,system-ui,sans-serif;margin:0;line-height:1.12}
+a{color:var(--gold)}
+.hero{background:radial-gradient(900px 520px at 80% 30%,var(--navy2),transparent),linear-gradient(160deg,#0C2A66,var(--navy) 70%);overflow:hidden}
+.hero-in{max-width:1120px;margin:0 auto;padding:56px 24px 0;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:end}
+.hero-txt{padding-bottom:56px}
+h1{font-size:clamp(2.6rem,6.2vw,4.8rem);font-weight:700;letter-spacing:-.025em}
+h1 em{display:block;font-style:normal;color:var(--gold)}
+.lead{font-size:1.2rem;color:#D3DDF3;max-width:30em;margin:22px 0 26px}
+.cta{display:inline-block;background:var(--gold);color:var(--navy);font:700 1.02rem Poppins,sans-serif;text-decoration:none;padding:15px 28px;border-radius:999px}
+.cta:hover{background:#F4DCA3}
+.cta:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.photo{justify-self:end;max-width:460px;width:100%;display:block;-webkit-mask-image:linear-gradient(to right,transparent,#000 24%),linear-gradient(to top,transparent,#000 14%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 24%),linear-gradient(to top,transparent,#000 14%);mask-composite:intersect}
+.facts{max-width:1120px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.fact{padding:22px 24px 24px 0}
+.fact small{display:block;color:var(--gold);font-weight:600;letter-spacing:.06em;font-size:.82rem}
+.fact b{font:600 1.15rem/1.3 Poppins,sans-serif;display:block;margin:4px 0}
+.fact span,.fact a{font-size:.95rem;color:#B8C6E6}
+.fact a{color:var(--gold)}
+#cd{max-width:1120px;margin:0 auto;padding:0 24px 22px;font:500 1rem Poppins,sans-serif;color:var(--gold)}
+.main{max-width:1120px;margin:0 auto;padding:64px 24px 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.main section+section{margin-top:56px}
+h2{font-size:1.65rem;font-weight:700;margin-bottom:18px}
+.main p{color:#CBD6EE;margin:0 0 14px;max-width:38em}
+.axes{display:grid;gap:0;border-top:1px solid var(--line)}
+.axes div{padding:18px 0;border-bottom:1px solid var(--line)}
+.axes h3{font-size:1.1rem;font-weight:500;color:var(--gold)}
+.axes p{margin:6px 0 0}
+.spk{display:grid;grid-template-columns:132px 1fr;gap:22px;align-items:center}
+.spk img{width:132px;height:132px;object-fit:cover;object-position:50% 12%;border-radius:50%;border:3px solid var(--gold)}
+.spk h3{font-size:1.35rem}
+.spk p{margin:6px 0 0}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font:500 1.02rem Poppins,sans-serif}
+details p{margin:10px 0 0}
+.logos{display:flex;flex-wrap:wrap;gap:28px 40px;align-items:center;background:#fff;border-radius:16px;padding:20px 28px;width:fit-content;max-width:100%}
+.logos img{height:70px;width:auto;display:block}
+.card{position:sticky;top:20px;background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 28px 70px rgba(0,0,0,.4)}
+.card h2{color:var(--ink);margin-bottom:4px;font-size:1.5rem}
+.sub{margin:0 0 6px;color:#52607F;font-size:.95rem}
+label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 5px}
+input,select{width:100%;font:inherit;padding:11px 12px;border:1.5px solid #C7D0E4;border-radius:10px;background:#fff;color:var(--ink)}
+input[readonly]{background:var(--mist);color:#3C4A6B}
+input:focus,select:focus,button:focus-visible{outline:3px solid #2F5BFF;outline-offset:1px;border-color:#2F5BFF}
+.hint{font-size:.85rem;color:#52607F;margin:4px 0 0;min-height:1.2em}
+.hint.err{color:var(--err)}.hint.ok{color:var(--ok)}
+.check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:.88rem;color:#3C4A6B}
+.check input{width:auto;margin-top:4px}
+button{margin-top:20px;width:100%;font:700 1.02rem Poppins,sans-serif;padding:14px;border:0;border-radius:12px;background:var(--navy);color:#fff;cursor:pointer}
+button:hover{background:var(--navy2)}button:disabled{opacity:.6;cursor:wait}
+#msg{margin:14px 0 0;font-weight:600}
+footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;color:#9FB0D6;font-size:.9rem}
+@media(max-width:900px){.hero-in,.main{grid-template-columns:1fr}.hero-txt{padding-bottom:8px}.photo{justify-self:center;max-width:340px}.facts{grid-template-columns:1fr}.fact{padding-right:0;border-bottom:1px solid var(--line)}.card{position:static}.spk{grid-template-columns:96px 1fr}.spk img{width:96px;height:96px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <div class="hero-txt">
+      <h1>Taller para <em>periodistas</em></h1>
+      <p class="lead">Perspectivas de la minería en Cusco. Comunicación y vigilancia ciudadana de la inversión pública.</p>
+      <a class="cta" href="#inscripcion">Quiero inscribirme</a>
+    </div>
+    <img class="photo" src="assets/expositor.jpg" alt="Patricio Federico Lewis Zúñiga, expositor del taller" onerror="this.style.display='none'">
+  </div>
+  <div class="facts">
+    <div class="fact"><small>FECHA</small><b>Viernes 9 de octubre</b><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller%20para%20periodistas&dates=20261009T140000Z/20261009T170000Z&location=Colegio%20de%20Periodistas%20Cusco%2C%20Av.%20Alameda%20Pachac%C3%BAtec%20510" target="_blank" rel="noopener">Agregar a mi calendario</a></div>
+    <div class="fact"><small>HORARIO</small><b>9:00 a. m. a 12:00 m.</b><span>Tres horas de taller</span></div>
+    <div class="fact"><small>LUGAR</small><b>Colegio de Periodistas Cusco</b><span>Av. Alameda Pachacútec 510, 3.er nivel · <a href="https://www.google.com/maps/search/?api=1&query=Colegio+de+Periodistas+Cusco+Av.+Alameda+Pachacutec+510" target="_blank" rel="noopener">Ver mapa</a></span></div>
+  </div>
+  <div id="cd" aria-live="polite"></div>
+</header>
+
+<main class="main">
+  <div>
+    <section>
+      <h2>De qué trata</h2>
+      <p>Un taller pensado para quienes cubren la actualidad de la región. Revisaremos cómo se ve hoy la minería en Cusco y cómo contar mejor lo que pasa con el dinero público que se invierte en el territorio.</p>
+      <p>Saldrás con ideas concretas para investigar, preguntar y comunicar con datos.</p>
+    </section>
+
+    <section>
+      <h2>Qué vamos a trabajar</h2>
+      <div class="axes">
+        <div><h3>Perspectivas de la minería en Cusco</h3><p>Panorama del sector y lo que viene para la región, visto desde la economía y las finanzas.</p></div>
+        <div><h3>Comunicación y vigilancia ciudadana</h3><p>Cómo informar de modo claro y verificable, y cómo el periodismo acompaña el control que hace la ciudadanía.</p></div>
+        <div><h3>Inversión pública</h3><p>Dónde buscar información, cómo leerla y qué preguntas hacer para dar seguimiento a las obras y los recursos.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expositor</h2>
+      <div class="spk">
+        <img src="assets/expositor.jpg" alt="" onerror="this.style.display='none'">
+        <div><h3>Patricio Federico Lewis Zúñiga</h3><p>Especialista en economía y finanzas.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cómo me inscribo?</summary><p>Escribe tu DNI, tu correo, tu celular y el medio donde trabajas. Tu nombre se llena solo al escribir el DNI. Si ya te inscribiste, la página te lo indicará.</p></details>
+      <details><summary>¿Para qué piden mis datos?</summary><p>Solo para organizar el taller: registrar tu asistencia y comunicarte cambios a tu correo o celular.</p></details>
+      <details><summary>¿Cómo llego?</summary><p>El taller es en el Colegio de Periodistas Cusco, Av. Alameda Pachacútec 510, tercer nivel. Usa el enlace “Ver mapa” de arriba.</p></details>
+    </section>
+
+    <section>
+      <h2>Organizadores y aliados</h2>
+      <div class="logos">
+        <img src="assets/logo-cpp.png" alt="Colegio de Periodistas del Perú, Filial Departamental del Cusco">
+        <img src="assets/logo-antapaccay.png" alt="Antapaccay">
+      </div>
+    </section>
+  </div>
+
+  <aside class="card" id="inscripcion">
+    <h2>Inscripción al taller</h2>
+    <p class="sub">Escribe tu DNI y completaremos tu nombre.</p>
+    <form id="f" novalidate>
+      <label for="dni">DNI</label>
+      <input id="dni" name="dni" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="8 dígitos" required>
+      <p class="hint" id="dniHint" aria-live="polite"></p>
+
+      <label for="nombres">Nombres</label>
+      <input id="nombres" name="nombres" readonly required>
+      <label for="apellidos">Apellidos</label>
+      <input id="apellidos" name="apellidos" readonly required>
+
+      <label for="correo">Correo electrónico</label>
+      <input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required>
+
+      <label for="celular">Celular</label>
+      <input id="celular" name="celular" type="tel" inputmode="numeric" maxlength="9" placeholder="9 dígitos, empieza con 9" required>
+
+      <label for="medio">Medio periodístico</label>
+      <input id="medio" name="medio" autocomplete="organization" placeholder="Escribe el medio donde trabajas" required>
+
+      <p class="hint" style="margin-top:16px">Al inscribirte autorizas el uso de tus datos solo para organizar este taller.</p>
+
+      <button type="submit" id="btn">Confirmar inscripción</button>
+      <p id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </aside>
+</main>
+<footer>Colegio de Periodistas del Perú · Filial Departamental del Cusco · Consejo Directivo 2026-2027</footer>
+
+<script>
+/* ===== CONFIGURACIÓN ===== */
+const CONFIG = {
+  API_URL: "https://script.google.com/macros/s/AKfycbww1bqFRPqMedO6tVBnv8wAiWW5Smt4ULFz0luXGXBy0OGhlDrjTDbOr3S31Be3kuuy9g/exec",        // URL de tu Apps Script (termina en /exec). Vacío = modo demostración.
+  EVENT_DATE: "2026-10-09T09:00:00-05:00"
+};
+/* ========================= */
+const $ = id => document.getElementById(id);
+const hint = (el, text, cls="") => { el.textContent = text; el.className = "hint " + cls; };
+let dniOk = false;
+
+(function countdown(){
+  const ms = new Date(CONFIG.EVENT_DATE) - new Date(), el = $("cd");
+  if (ms <= 0) { el.textContent = ""; return; }
+  const d = Math.ceil(ms / 864e5);
+  el.textContent = d === 1 ? "El taller es mañana." : `Faltan ${d} días para el taller.`;
+})();
+
+const unlockNames = on => { $("nombres").readOnly = $("apellidos").readOnly = !on; };
+
+$("dni").addEventListener("input", async e => {
+  const v = e.target.value = e.target.value.replace(/\D/g, "").slice(0, 8);
+  dniOk = false; $("btn").disabled = false; $("nombres").value = $("apellidos").value = "";
+  if (v.length < 8) { hint($("dniHint"), ""); unlockNames(false); return; }
+  if (!CONFIG.API_URL) { unlockNames(true); dniOk = true; hint($("dniHint"), "Consulta automática no configurada: escribe tu nombre.", "err"); return; }
+  hint($("dniHint"), "Buscando…");
+  try {
+    const d = await (await fetch(`${CONFIG.API_URL}?action=dni&numero=${v}`)).json();
+    if (d.registrado) { $("btn").disabled = true; hint($("dniHint"), "Ya estás registrado en el evento. Te esperamos el 9 de octubre.", "ok"); return; }
+    if (d.error || !d.nombres) throw new Error();
+    $("nombres").value = d.nombres;
+    $("apellidos").value = `${d.apellidoPaterno || ""} ${d.apellidoMaterno || ""}`.trim();
+    unlockNames(false); dniOk = true;
+    hint($("dniHint"), "Datos encontrados.", "ok");
+  } catch (_) {
+    unlockNames(true); dniOk = true;
+    hint($("dniHint"), "No pudimos consultar tu DNI. Escribe tu nombre y apellidos.", "err");
+  }
+});
+$("celular").addEventListener("input", e => e.target.value = e.target.value.replace(/\D/g, "").slice(0, 9));
+
+function validate(){
+  if (!dniOk || $("dni").value.length !== 8) return "Escribe un DNI de 8 dígitos.";
+  if (!$("nombres").value.trim() || !$("apellidos").value.trim()) return "Completa tu nombre y apellidos.";
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("correo").value.trim())) return "Escribe un correo válido.";
+  if (!/^9\d{8}$/.test($("celular").value)) return "El celular debe tener 9 dígitos y empezar con 9.";
+  if (!$("medio").value.trim()) return "Escribe el medio periodístico donde trabajas.";
+  return "";
+}
+
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const msg = $("msg"), err = validate();
+  if (err) { msg.style.color = "var(--err)"; msg.textContent = err; return; }
+  const data = Object.fromEntries(new FormData($("f")).entries());
+  data.correo = data.correo.trim().toLowerCase();
+  $("btn").disabled = true; msg.style.color = "var(--ink)"; msg.textContent = "Enviando…";
+  try {
+    if (CONFIG.API_URL) {
+      const d = await (await fetch(CONFIG.API_URL, { method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(data) })).json();
+      if (d.error === "duplicado") throw new Error("Este DNI ya está inscrito.");
+      if (d.error) throw new Error("No se pudo guardar. Inténtalo de nuevo.");
+    } else { console.log("Modo demostración, datos no enviados:", data); }
+    msg.style.color = "var(--ok)";
+    msg.textContent = CONFIG.API_URL ? "Listo, quedaste inscrito. Te esperamos el 9 de octubre." : "Modo demostración: el formulario funciona, pero aún no guarda datos.";
+    if (CONFIG.API_URL) { $("f").reset(); dniOk = false; unlockNames(false); hint($("dniHint"), ""); }
+  } catch (x) {
+    msg.style.color = "var(--err)"; msg.textContent = x.message || "Error de conexión. Inténtalo de nuevo.";
+  } finally { $("btn").disabled = false; }
+});
+</script>
+</body>
+</html>
